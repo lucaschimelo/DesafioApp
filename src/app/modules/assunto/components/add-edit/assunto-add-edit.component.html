@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{data ? 'Editar': 'Cadastrar'}} assunto</h2>
+<mat-dialog-content class="mat-typography">
+ 
+<form [formGroup]="assuntoForm">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição:</mat-label>
+                <input matInput type="text" placeholder="Descrição" formControlName="descricao">
+            </mat-form-field>           
+        </div>
+       
+    </div>
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+  <button mat-button (click)="save()" cdkFocusInitial>Salvar</button>
+</mat-dialog-actions>
